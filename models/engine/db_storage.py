@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Database Storag"""
+"""Database storage"""
 from models.base_model import BaseModel, Base
 from models.amenity import Amenity
 from models.city import City
@@ -10,6 +10,7 @@ from models.user import User
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker, relationship, scoped_session
 from os import getenv
+
 
 class DBStorage:
     """Database storage class
