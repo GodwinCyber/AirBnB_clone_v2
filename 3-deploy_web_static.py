@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 from fabric.api import *
+from time import strftime
 from datetime import datetime
 from os import path
 
@@ -29,7 +30,7 @@ def do_deploy(archive_path):
     print(file_name)
     no_ext = file_name.split(".")[0]
     print(no_ext)
-    remote_path = "/data/web_static/releases/" + no_ext + "/"
+    remote_path = "/data/web_static/releases/" + no_ext
     try:
         put(archive_path, '/tmp/')
         run("mkdir -p /data/web_static/releases/{}".format(remote_path))
