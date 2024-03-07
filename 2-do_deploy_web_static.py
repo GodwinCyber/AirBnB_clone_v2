@@ -17,7 +17,7 @@ def do_deploy(archive_path):
         print(file_name)
         no_ext = file_name.split(".")[0]
         print(no_ext)
-        remote_path = "/data/web_static/releases/" + no_ext + "/"
+        remote_path = "/data/web_static/releases/" + no_ext
         put(archive_path, '/tmp/')
         run("mkdir -p /data/web_static/releases/{}".format(remote_path))
         run("tar -xzvf /tmp/{} -C /data/web_static/releases/{}/"
