@@ -35,7 +35,7 @@ def c():
 @app.route("/python/<text>", strict_slashes=False)
 def python(text="is cool"):
     """/python/<text>: display "Python", followed by
-    the value of the text variable 
+    the value of the text variable
     The default value of text is "is cool"
     """
     text = text.replace("_", " ")
